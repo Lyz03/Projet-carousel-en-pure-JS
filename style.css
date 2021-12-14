@@ -23,7 +23,7 @@ button {
     position: absolute;
     height: 2rem;
     width: 2rem;
-    opacity: 0.5;
+    opacity: 0.6;
     transition: opacity;
     border: none;
     z-index: 10;
@@ -39,4 +39,25 @@ button:hover {
 
 #next {
     right: 5px;
+}
+
+#small_div_container {
+    display: flex;
+    z-index: 10;
+    position: absolute;
+    bottom: 3px;
+    left: 35%;
+}
+
+.small_div {
+    height: 10px;
+    width: 10px;
+    border-radius: 20px;
+    background-color: white;
+    margin: 0.4rem;
+    opacity: 0.6;
+}
+
+#div0 {
+    opacity: 1;
 }
