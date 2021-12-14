@@ -45,6 +45,7 @@ const Carousel = function (imagesArray, container, widthPx, heightPx, smallDivCo
 
     // for events
     this.previousTransition = function () {
+        // if first image go back to the last one
         if (translate === 0)
             translate = (imagesArray.length * parseInt(widthPx)) - parseInt(widthPx);
         else
@@ -59,6 +60,8 @@ const Carousel = function (imagesArray, container, widthPx, heightPx, smallDivCo
 
     // for events
     this.nextTransition = function () {
+
+        // if last image go back to the first one
         if (translate === (imagesArray.length * parseInt(widthPx)) - parseInt(widthPx))
             translate = 0;
         else
@@ -76,7 +79,7 @@ const Carousel = function (imagesArray, container, widthPx, heightPx, smallDivCo
         setInterval(() => this.nextTransition(), 5000)
     }
 
-    // add case there is more than 5 images
+    // switch for 5 images
     this.curentImage = function () {
         const div0 = document.getElementById('div0');
         const div1 = document.getElementById('div1');
