@@ -1,0 +1,42 @@
+section {
+    display: flex;
+    margin-top: 5rem;
+    justify-content: center;
+}
+
+#carousel {
+    width: 400px;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+}
+
+img {
+    max-height: 100%;
+    transform: translateX(0);
+    transition: transform 1500ms;
+}
+
+button {
+    position: absolute;
+    height: 2rem;
+    width: 2rem;
+    opacity: 0.5;
+    transition: opacity;
+    border: none;
+    z-index: 10;
+}
+
+button:hover {
+    opacity: 1;
+}
+
+#previous {
+    left: 5px;
+}
+
+#next {
+    right: 5px;
+}
